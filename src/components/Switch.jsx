@@ -2,6 +2,8 @@ import React from 'react';
 import { observer } from 'mobx-react';
 import styled, { keyframes } from 'styled-components';
 import { useStores } from '../contexts/storesContext';
+import Circle from 'assets/images/circle.svg';
+import Swap from 'assets/images/swap.svg';
 
 const Container = styled.div`
 	display: flex;
@@ -45,11 +47,11 @@ const Switch = observer(() => {
     return (
         <Container>
             <Spinner
-                src="/circle.svg"
+                src={Circle}
                 style={{ display: showLoader ? 'block' : 'none' }}
             />
             <SwapIcon
-                src="/swap.svg"
+                src={Swap}
                 onClick={() => switchAssets()}
                 style={{ display: showLoader ? 'none' : 'block' }}
             />
